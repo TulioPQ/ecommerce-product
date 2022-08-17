@@ -29,23 +29,35 @@ document.querySelector('.close-button').addEventListener('click', () => {
 document.querySelector('.lightbox-button.left').addEventListener('click', () => {
     const actualImg = largeImageLightBox.getAttribute('src')
     const imgNumber = parseInt(actualImg[actualImg.length-5])
-    console.log(actualImg.replace(`${imgNumber}.jpg`,`${imgNumber -1}.jpg`))
     if (imgNumber === 1){
         return ''
     } else {
         largeImageLightBox.setAttribute('src', actualImg.replace(`${imgNumber}.jpg`,`${imgNumber -1}.jpg`))
         largeImage.setAttribute('src', actualImg.replace(`${imgNumber}.jpg`,`${imgNumber -1}.jpg`))
+        document.querySelectorAll('.selected').forEach(item => {
+            item.classList.remove('selected')
+        })
+        document.querySelectorAll(`.thumb${imgNumber-1}`).forEach(item => {
+            item.parentElement.classList.add('selected')
+            item.classList.add('selected')
+        })
     }
 })
 
 document.querySelector('.lightbox-button.right').addEventListener('click', () => {
     const actualImg = largeImageLightBox.getAttribute('src')
     const imgNumber = parseInt(actualImg[actualImg.length-5])
-    console.log(actualImg.replace(`${imgNumber}.jpg`,`${imgNumber -1}.jpg`))
     if (imgNumber === 4){
         return ''
     } else {
         largeImageLightBox.setAttribute('src', actualImg.replace(`${imgNumber}.jpg`,`${imgNumber +1}.jpg`))
         largeImage.setAttribute('src', actualImg.replace(`${imgNumber}.jpg`,`${imgNumber +1}.jpg`))
+        document.querySelectorAll('.selected').forEach(item => {
+            item.classList.remove('selected')
+        })
+        document.querySelectorAll(`.thumb${imgNumber+1}`).forEach(item => {
+            item.parentElement.classList.add('selected')
+            item.classList.add('selected')
+        })
     }
 })
