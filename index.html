@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script defer type="application/javascript" src="./JS/handleCart.js"></script>
+    <script defer type="application/javascript" src="./JS/handleImg.js"></script>
+
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+
+</head>
+
+<body>
+    <header>
+
+        <div class="header-left">
+            <img src="./images/logo.svg" alt="logo">
+
+            <nav class="menu">
+                <ul>
+                    <li>Collections</li>
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>Women</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="cart">
+                <img src="./images/icon-cart.svg" alt="icon cart">
+                <span class="cart-quantities">0</span>
+            </div>
+            <div class="user"><img src="./images/image-avatar.png" alt="image avatar"></div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="main-left">
+            <div class="large-image">
+                <img src="./images/image-product-1.jpg" alt="product image">
+            </div>
+            <div class="thumb-images">
+                <span class="selected"><img class='thumb-image thumb1 selected' src="./images/image-product-1-thumbnail.jpg"
+                        alt="thumbnail1"></span>
+                <span><img class='thumb-image thumb2' src="./images/image-product-2-thumbnail.jpg" alt="thumbnail2"></span>
+                <span><img class='thumb-image thumb3' src="./images/image-product-3-thumbnail.jpg" alt="thumbnail3"></span>
+                <span><img class='thumb-image thumb4' src="./images/image-product-4-thumbnail.jpg" alt="thumbnail4"></span>
+            </div>
+        </div>
+
+        <div class="main-right">
+            <h3>Sneaker Company</h3>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p class="description">These low-profile Sneakers are your perfect casual wear companion. Featuring a
+                durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+            <div class="price">
+                <p class="actual-price">$125.00</p>
+                <p class="discount">50%</p>
+                <p class="old-price">$250.00</p>
+            </div>
+            <div class="buttons">
+                <div class="quantities">
+                    <span id="quantities-minus"><img src="./images/icon-minus.svg" alt="minus"></span>
+                    <span id="quantities-number">0</span>
+                    <span id="quantities-plus"><img src="./images/icon-plus.svg" alt="plus"></span>
+                </div>
+
+                <div class="add-cart">
+                    <span><img src="./images/icon-cart.svg" alt=""></span>
+                    <span>Add to cart</span>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+    <div class="lightbox" id="lightbox">
+
+        <div class="close-button"><img src="./images/icon-close.svg" alt=""></div>
+        <div class="main-image-container">
+            <div class="lightbox-button left"><img src="./images/icon-previous.svg" alt=""></div>
+            <div class="main-image"><img src="./images/image-product-1.jpg" alt="test"></div>
+            <div class="lightbox-button right"><img src="./images/icon-next.svg" alt=""></div>
+        </div>
+
+
+        <div class="thumb-images">
+            <span class="selected"><img class='thumb-image thumb1 selected' src="./images/image-product-1-thumbnail.jpg"
+                    alt="thumbnail1"></span>
+            <span><img class='thumb-image thumb2' src="./images/image-product-2-thumbnail.jpg" alt="thumbnail2"></span>
+            <span><img class='thumb-image thumb3' src="./images/image-product-3-thumbnail.jpg" alt="thumbnail3"></span>
+            <span><img class='thumb-image thumb4' src="./images/image-product-4-thumbnail.jpg" alt="thumbnail4"></span>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+main {
+    font-family: 'Kumbh Sans', sans-serif;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 10%;
+    padding-top: 2rem;
+}
+
+
+.main-left {
+    grid-area: left;
+    padding: 0rem 3rem;
+}
+
+.large-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.large-image img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+}
+
+.thumb-images {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.thumb-images span {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: calc(20% + 2px);
+    border-radius: 12px;
+    background-color: white;
+}
+
+.thumb-images span.selected {
+    outline: 2px solid hsl(26, 100%, 55%);
+}
+
+.thumb-image.selected {
+    opacity: 0.5;
+}
+
+
+.thumb-image {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.thumb-image:hover {
+    opacity: 0.5;
+}
+
+
+
+.main-right {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5% 0;
+}
+
+.main-right h3 {
+    text-transform: uppercase;
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+
+}
+
+.main-right h1 {
+    color: black;
+    font-size: 3rem;
+}
+
+.description {
+    color: hsl(219, 9%, 45%);
+}
+
+.actual-price {
+    display: inline;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.discount {
+    display: inline;
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    font-weight: 700;
+    padding: 3px;
+    margin: 1rem;
+}
+
+
+.old-price {
+    color: hsl(220, 14%, 75%);
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    height: 3.5rem;
+}
+
+.quantities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 0 1rem;
+}
+
+.quantities span {
+    margin: 0 1rem;
+}
+
+#quantities-minus,
+#quantities-plus {
+    cursor: pointer;
+}
+
+.add-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 10px;
+    color: white;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.add-cart span img {
+    margin-right: 1rem;
+    filter: brightness(0) invert(1);
+}
+
+.lightbox {
+    position: fixed;
+    flex-direction: column;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000aa;    
+}
+
+.lightbox .close-button{
+    width: 30%;
+    position: relative;
+    
+}
+.lightbox .close-button img{
+    filter: brightness(0) invert(1);
+    position: absolute;
+    right: 0;
+    top: -1rem;
+    cursor: pointer;
+}
+
+
+
+.lightbox .main-image-container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.lightbox-button{
+    position: relative;
+}
+
+.lightbox-button{
+    cursor: pointer;
+}
+
+.lightbox-button.left img{
+    position: absolute;
+    left: -1.5rem;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.lightbox-button.right img{
+    position: absolute;
+    right: -1.5rem;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+
+
+
+.lightbox .main-image-container .lightbox-button img{
+    width: .8rem;
+    line-height: .8rem;
+    padding: 1rem;
+    background-color:  hsl(223, 64%, 98%);
+    border-radius: 50%;
+    
+}
+
+
+.lightbox .main-image-container .main-image{
+    width: 35%;
+}
+.lightbox .main-image-container .main-image img{
+    width: 100%;
+    border-radius: 5%;
+}
+
+
+.lightbox .thumb-images{
+    margin: 2rem;
+    width: 25%;
+}
